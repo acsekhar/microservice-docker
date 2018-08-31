@@ -1,0 +1,20 @@
+# IDE
+.idea
+*.iml
+*.ipr
+*.iws
+.settings
+.project
+.classpath
+classes
+*.ipr
+*.iws
+*.iml
+
+# Build Output
+build
+out
+.gradle
+logs
+bin
+

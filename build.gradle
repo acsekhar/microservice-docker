@@ -1,0 +1,62 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    ext {
+        springBootVersion = '1.5.4.RELEASE'
+        junitVersion = '4.12'
+        jmockitVersion = '1.17'
+        hamcrestVersion = '1.3'
+        ldapClient = '1.0.3'
+
+        // commons libraries
+        commonslang3Version = '3.3.2'
+        commonsIoVersion = '2.5'
+        commonsPoolVersion = '2.4.2'
+        commonsCollection = '3.2.2'
+        commonsBeanUtils = '1.9.3'
+        commonsCode = '1.10'
+
+        tokenVersion = "2.+"
+        abacRbacVersion = "0.3.7.RELEASE"
+        springBootVersion = '1.5.4.RELEASE'
+        jacksonCoreVersion = '2.8.7'
+
+        swaaggerVersion = "2.7.0"
+    }
+    dependencies {
+        classpath group: 'org.springframework.boot', name: 'spring-boot-gradle-plugin', version: springBootVersion
+    }
+}
+
+
+
+allprojects {
+
+    group = 'org.meghraj.docker.samples'
+
+    dependencies {
+
+        // Logging compatibility libraries
+        /*compile("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:${jacksonCoreVersion}")
+
+        compile(group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.7')
+        compile(group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.7')
+        compile(group: 'org.apache.logging.log4j', name: 'log4j-web', version: '2.7')
+
+        // Unit testing support
+        compileOnly("org.jmockit:jmockit:${jmockitVersion}")
+        testCompile("org.jmockit:jmockit:${jmockitVersion}")
+        testCompile("junit:junit:${junitVersion}")
+        testCompile("org.springframework.boot:spring-boot-starter-test:${springBootVersion}")*/
+
+    }
+
+    configurations {
+        compile.exclude group:'ch.qos.logback'
+        compile.exclude group:'org.slf4j', module: 'log4j-over-slf4j'
+        compile.exclude group:'org.codenarc', module: 'CodeNarc'
+    }
+}
+
