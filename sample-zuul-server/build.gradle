@@ -15,7 +15,6 @@ buildscript {
         junitVersion = '4.12'
         jmockitVersion = '1.17'
         hamcrestVersion = '1.3'
-        ldapClient = '1.0.3'
 
         springJdbcVersion = '4.3.2.RELEASE'
 
@@ -27,8 +26,7 @@ buildscript {
         commonsBeanUtils = '1.9.3'
         commonsCode = '1.10'
 
-        tokenVersion = "2.+"
-        abacRbacVersion = "0.3.7.RELEASE"
+       
         springBootVersion = '1.5.4.RELEASE'
         jacksonCoreVersion = '2.8.7'
         h2Version = '1.4.193'
