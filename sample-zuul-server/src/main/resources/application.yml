@@ -16,7 +16,7 @@ startup:
       lastName: doe
 spring:
   application:
-    name: spring-cloud-eureka-cart-client
+    name: spring-cloud-eureka-zuul-client
 server:
   port: 8090
 eureka:
