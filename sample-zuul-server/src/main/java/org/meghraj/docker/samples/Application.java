@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.zuul.EnableZuulServer;
 
 /**
  * Created by C840290 on 8/30/2018.
@@ -14,7 +15,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @SpringBootApplication
 @EnableAutoConfiguration
 @EnableConfigurationProperties
-
+@EnableZuulServer
 @EnableEurekaClient
 public class Application {
     public static void main(String[] args) {
