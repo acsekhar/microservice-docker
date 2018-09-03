@@ -25,6 +25,15 @@ eureka:
       defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
   instance:
     preferIpAddress: true
+
+
+zuul:
+  prefix: /api
+  routes:
+    account:
+      path: /account/**
+      serviceId: spring-cloud-eureka-account-client
+
 ---
 spring.profiles: ci
 
