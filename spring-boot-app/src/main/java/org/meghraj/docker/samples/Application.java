@@ -32,7 +32,7 @@ class sample {
     @Autowired
     AccountsRepository accountsRepository;
 
-    @RequestMapping(value = "/api/sample", produces = "application/json")
+    @RequestMapping(value = "/account/sample", produces = "application/json")
 
     public ResponseEntity<Account> hello() {
         return ResponseEntity.ok(accountsRepository.findByUserName("user1"));
